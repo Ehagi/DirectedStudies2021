@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript with "Style"
+    </title>
+    <script>
+        function mult() {
+            var x = prompt("enter x: ");
+            var y = prompt("enter y: ");
+            var z = x * y;
+
+            document.getElementById('mul').innerHTML = "Multiply " + x + " by " + y + " = " + z;
+        }
+
+        function sq() {
+            var x = prompt("enter x: ");
+            var z = Math.sqrt(x);
+            document.getElementById('mul').innerHTML = "square root " + x + " = " + z;
+        }
+
+        function py() {
+            var a = prompt("Enter value for side a: ");
+            var b = prompt("Enter value for side b: ");
+            var c = Math.sqrt(a ** 2 + b ** 2);
+            document.getElementById('mul').innerHTML = "Side c = " + c;
+        }
+
+        function pya() {
+            var c = prompt("Enter the value for the hypotenuse: ");
+            var a = prompt("Enter the value of one leg of the Triangle: ");
+            var b = Math.sqrt(c ** 2 - a ** 2);
+            document.getElementById('mul').innerHTML = "Side b = " + b;
+        }
+
+        function ProjM() {
+            var b = prompt("Enter the initial velocity in m/s: ");
+            var c = prompt("Enter the initial height in meters: ");
+            var a = -9.81;
+            var PosiZero = -b / (2 * a) - Math.sqrt(b ** 2 - 4 * a * c) / (2 * a);
+            document.getElementById('mul').innerHTML = "Axis of Sym = :" + -b / (2 * a) + ", Seconds in air = " + PosiZero;
+        }
+    </script>
+</head>
+"
+
+<body>
+    <h2>JavaScript can be placed</h2>
+    <ul>
+        <li>in the "head" element</li>
+        <li>in the "body" element</li>
+        <li>in an external file</li>
+        <li>in an external url</li>
+        <li>in an external folder</li>
+    </ul>
+    <h2>Change CSS style</h2>
+    <p id="demo"> JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">big</button>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='15px'">small</button>
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Hide!</button>
+    <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+    <h2>JavaScript from the head</h2>
+    <h4>So "var" is a keyword to create variables in JavaScript.</h4>
+    <p id="mul">test</p>
+    <button type="button" onclick="mult()">Multiply</button>
+    <button type="button" onclick="sq()">squareRoot</button>
+    <button type="button" onclick="py()">pythag c</button>
+    <button type="button" onclick="pya()">pythag b</button>
+    <button type="button" onclick="ProjM()">Projectile Motion</button>
+
+</body>
+
+</html>
